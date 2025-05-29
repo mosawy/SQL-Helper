@@ -1,0 +1,133 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "creation": "2024-05-29 11:48:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "query_section",
+  "doctype_select",
+  "document_name",
+  "question",
+  "run_query_button",
+  "results_section",
+  "results_html",
+  "chart_html",
+  "actions_section",
+  "save_query_button",
+  "save_chart_button",
+  "load_section",
+  "load_saved_query",
+  "load_saved_chart"
+ ],
+ "fields": [
+  {
+   "fieldname": "query_section",
+   "fieldtype": "Section Break",
+   "label": "Query Input"
+  },
+  {
+   "fieldname": "doctype_select",
+   "fieldtype": "Select",
+   "label": "Select DocType",
+   "reqd": 1
+   // Options will be populated dynamically by client script
+  },
+  {
+   "fieldname": "document_name",
+   "fieldtype": "Data",
+   "label": "Document Name (Optional)",
+   "description": "Enter specific document name if querying a single record (e.g., INV-001)"
+  },
+  {
+   "fieldname": "question",
+   "fieldtype": "Text",
+   "label": "Ask your question in natural language",
+   "reqd": 1
+  },
+  {
+   "fieldname": "run_query_button",
+   "fieldtype": "Button",
+   "label": "Run Query"
+  },
+  {
+   "fieldname": "results_section",
+   "fieldtype": "Section Break",
+   "label": "Results"
+  },
+  {
+   "fieldname": "results_html",
+   "fieldtype": "HTML",
+   "label": "Query Results"
+  },
+  {
+   "fieldname": "chart_html",
+   "fieldtype": "HTML",
+   "label": "Chart Visualization"
+  },
+  {
+   "fieldname": "actions_section",
+   "fieldtype": "Section Break",
+   "label": "Actions"
+  },
+  {
+   "fieldname": "save_query_button",
+   "fieldtype": "Button",
+   "label": "Save Query",
+   "hidden": 1 // Initially hidden, shown after successful query
+  },
+  {
+   "fieldname": "save_chart_button",
+   "fieldtype": "Button",
+   "label": "Save Chart",
+   "hidden": 1 // Initially hidden, shown after successful query with chart
+  },
+  {
+   "fieldname": "load_section",
+   "fieldtype": "Section Break",
+   "label": "Load Saved Items"
+  },
+  {
+   "fieldname": "load_saved_query",
+   "fieldtype": "Link",
+   "label": "Load Saved Query",
+   "options": "Saved Query"
+   // Add filter based on user permissions if needed
+  },
+  {
+   "fieldname": "load_saved_chart",
+   "fieldtype": "Link",
+   "label": "Load Saved Chart",
+   "options": "Saved Chart"
+   // Add filter based on user ownership
+  }
+ ],
+ "is_calendar_and_gantt": 0,
+ "is_submittable": 0,
+ "links": [],
+ "modified": "2024-05-29 11:48:00.000000",
+ "modified_by": "Administrator",
+ "module": "SQL Helper",
+ "name": "AI Assistant Interface",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager", // Or define a specific role for users of this tool
+   "share": 1,
+   "write": 1
+  }
+  // Add permissions for other roles who should use this interface
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}
+

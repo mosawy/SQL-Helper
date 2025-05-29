@@ -3,12 +3,13 @@ name = "sql_helper"
 authors = [
     { name = "Mohamed Elsawy", email = "mohamed.elsawy739@gmail.com"}
 ]
-description = "help users"
+description = "AI Assistant to query ERPNext data using natural language (powered by Google Gemini)"
 requires-python = ">=3.10"
 readme = "README.md"
 dynamic = ["version"]
 dependencies = [
     # "frappe~=15.0.0" # Installed and managed by bench.
+    "google-generativeai>=0.4.0" # Added Gemini client library
 ]
 
 [build-system]
@@ -54,3 +55,4 @@ typing-modules = ["frappe.types.DF"]
 quote-style = "double"
 indent-style = "tab"
 docstring-code-format = true
+

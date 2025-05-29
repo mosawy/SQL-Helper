@@ -1,0 +1,30 @@
+/* CSS for AI Assistant Interface */
+
+/* Add some spacing */
+.form-section {
+    margin-bottom: 15px;
+}
+
+/* Style the results table */
+.table-responsive {
+    max-height: 400px; /* Limit table height */
+    overflow-y: auto;
+    margin-bottom: 10px;
+}
+
+#sqlHelperChart {
+    margin-top: 15px;
+    max-height: 350px; /* Limit chart height */
+}
+
+/* Ensure buttons are visible */
+[data-fieldname="run_query_button"] button,
+[data-fieldname="save_query_button"] button,
+[data-fieldname="save_chart_button"] button {
+    margin-top: 5px;
+}
+
+.sql-helper-export-csv {
+    margin-top: 5px;
+}
+
